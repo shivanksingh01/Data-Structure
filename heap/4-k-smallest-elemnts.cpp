@@ -1,3 +1,9 @@
+//  find k smallest elemnts in an array
+//  input arr[] : 7, 3, 9, 11, 5, 4, 8, 12
+//            k : 3
+// output arr[] : 5, 4, 3
+
+
 #include <iostream>
 #include <vector>
 #include <queue>
