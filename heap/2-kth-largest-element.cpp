@@ -1,7 +1,6 @@
 // Find k’th largest element in an array
 // Input:  arr = [7, 4, 6, 3, 9, 1]
 //           k = 3
-
 // Output:   k’th largest array element :  4
 
 #include <iostream>
