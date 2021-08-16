@@ -1,7 +1,7 @@
 // find top k largest elemnts in an array
 //  input arr[] : 7, 3, 9, 11, 5, 4, 8, 12
 //            k : 3
-// output arr[] : 7 11 12 
+// output arr[] : 8 11 12 
 
 
 #include <iostream>
