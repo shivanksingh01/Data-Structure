@@ -1,3 +1,9 @@
+// find top k largest elemnts in an array
+//  input arr[] : 7, 3, 9, 11, 5, 4, 8, 12
+//            k : 3
+// output arr[] : 7 11 12 
+
+
 #include <iostream>
 #include <vector>
 #include <queue>
@@ -43,7 +49,9 @@ void klargest(vector<int> &v, int k)
 // while (minh.size() > 0){
 //         cout<<minh.top()<<"    ";
 //         minh.pop();
-//     }
+// }
+
+
 int main()
 {
     vector<int> v = {7, 3, 9, 11, 5, 4, 8, 12};
