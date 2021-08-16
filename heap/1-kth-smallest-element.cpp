@@ -1,7 +1,6 @@
 // Find k’th smallest element in an array
 // Input:  arr = [7, 4, 6, 3, 9, 1]
 //           k = 3
- 
 // Output:   k’th smallest array element :  4
 
 #include<iostream>
