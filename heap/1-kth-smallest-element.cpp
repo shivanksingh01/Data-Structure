@@ -1,7 +1,6 @@
 // Find k’th smallest element in an array
 // Input:  arr = [7, 4, 6, 3, 9, 1]
 //           k = 3
- 
 // Output:   k’th smallest array element :  4
 
 #include<iostream>
@@ -33,7 +32,7 @@ int kthsmallest(vector<int> v, int k){
             maxh.push(v[i]);
         }
     }
-    return maxh.top();
+    return maxh.top(); 
 }
 
 // driver code
