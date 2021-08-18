@@ -43,5 +43,4 @@ int main(){
     int key = 12;
     printf("\nsearching : %d   ...............\n", key);
     binarySearch(arr, n, key);
-    printf("search ended ............ \n");
 }
