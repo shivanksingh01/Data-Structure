@@ -33,7 +33,7 @@ int majorityElement(int arr[], int n){
     return -1;
 }
 
-//  Moore’s Voting Algorithm
+// ------- Moore’s Voting Algorithm  ------------
 int majorityElemnt(int arr[], int n){
     int ele = arr[0];
     int count = 1;
