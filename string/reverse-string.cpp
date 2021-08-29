@@ -23,7 +23,7 @@ void reverseString(vector<char>& s) {
             s[n-i] = s[i];
             s[i] = temp;
         }
-        // displaying arrayj
+        // displaying array
         for(char ch : s){
             cout<<ch<<"  ";
         }   

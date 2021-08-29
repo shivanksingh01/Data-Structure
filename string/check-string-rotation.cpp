@@ -56,7 +56,7 @@ bool checkRotation(string s1, string s2){
             q1.push(s2[i]);
         }
 
-        int k= s2.size();   // or k = s1.size()
+        int k = s2.size();   // or k = s1.size()
         while (k--){
         //  remove elemnt from front and push it from back (rotate the queue)
             char ch= q2.front();
