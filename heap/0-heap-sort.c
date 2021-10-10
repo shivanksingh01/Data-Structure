@@ -13,9 +13,9 @@ void swap(int *a, int *b)
 //  n --> size of heap
 void heapify(int arr[], int n, int i)  
 {
-    int max = i;
-    int left = 2 * i + 1;       // index of left child
-    int right = 2 * i + 2;      // index of right child 
+    int max = i;                // if i be the parent node 
+    int left = 2 * i + 1;       // index of left child node
+    int right = 2 * i + 2;      // index of right child node
 
     if (left < n && arr[left] > arr[max])  // if left child is larger than root
         max = left;
