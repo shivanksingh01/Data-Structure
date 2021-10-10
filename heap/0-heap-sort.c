@@ -19,6 +19,7 @@ void heapify(int arr[], int n, int i)
 
 //     left < n --> index of left child is in bounds of array (i.e. not exceeding the array )
 //     right < n --> index of right child is in bounds of array (i.e. not exceeding the array )  : within the rannge
+    
     if (left < n && arr[left] > arr[max])  // if left child is larger than root
         max = left;
     if (right < n && arr[right] > arr[max]) // if right child is larger than max
@@ -45,6 +46,7 @@ void heapsort(int arr[], int n)
 }
 
 // display the array of size n
+
 void display(int arr[], int n){
     for (int i = 0; i < n; i++)
     {
