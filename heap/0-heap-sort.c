@@ -11,7 +11,7 @@ void swap(int *a, int *b)
 
 // To heapify a subtree rooted with node i which is an index in arr[].
 //  n --> size of heap
-void heapify(int arr[], int n, int i)  
+void heapify(int arr[], int n, int i)          // max-heapify
 {
     int max = i;                // if i be the parent node 
     int left = 2 * i + 1;       // index of left child node
