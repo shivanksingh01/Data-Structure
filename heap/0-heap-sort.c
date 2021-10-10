@@ -17,6 +17,8 @@ void heapify(int arr[], int n, int i)
     int left = 2 * i + 1;       // index of left child node
     int right = 2 * i + 2;      // index of right child node
 
+//     left < n --> index of left child is in bounds of array (i.e. not exceeding the array )
+//     right < n --> index of right child is in bounds of array (i.e. not exceeding the array )  : within the rannge
     if (left < n && arr[left] > arr[max])  // if left child is larger than root
         max = left;
     if (right < n && arr[right] > arr[max]) // if right child is larger than max
