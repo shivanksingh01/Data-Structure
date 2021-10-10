@@ -35,13 +35,12 @@ void heapify(int arr[], int n, int i)          // max-heapify
 
 void heapsort(int arr[], int n)
 {
-    for (int i = n / 2 - 1; i >= 0; i--)  // build heap
+    for (int i = n / 2 - 1; i >= 0; i--)  // build heap  (max-heap)
         heapify(arr, n, i);
-    for (int i = n - 1; i >= 0; i--)  //extract elemnt from heap one-by-one
+    for (int i = n - 1; i >= 0; i--)  //extract element from heap one-by-one
     {
-        swap(&arr[0], &arr[i]);   // move rpot to end
-        // call max heapify on the reduced heap
-        heapify(arr, i, 0);
+        swap(&arr[0], &arr[i]);   // move root to end : swap root with leaf (last array element)
+        heapify(arr, i, 0);     // call max heapify on the reduced heap
     }
 }
 
