@@ -25,7 +25,7 @@ void sortksortedarray(vector<int> &v, int k)
         minh.pop();
         minh.push(v[i]);
     }
-
+//  pop all remaining elements from the min-heap and assign them to the next available array index
     while (!minh.empty())
     {
         v[index++] = minh.top();
