@@ -8,16 +8,20 @@
 
 using namespace std;
 void sortksortedarray(vector<int> &v, int k)
-{
-    priority_queue<int, vector<int>, greater<int>> minh;
-    for (int i = 0; i <= k; i++)
+{ 
+    int n = v.size();
+    priority_queue<int, vector<int>, greater<int>> minh;   // create a min-heap
+    for (int i = 0; i <= k; i++)   // insert first k+1 element in heap
     {
         minh.push(v[i]);
     }
     int index = 0;
-    for (int i = k + 1; i < v.size(); i++)
+    for (int i = k + 1; i < n; i++)
     {
-        v[index++] = minh.top();
+        // note :  array[i++] increments the value of i. 
+        // The expression evaluates to array[i], before i has been incremented
+        
+        v[index++] = minh.top();   
         minh.pop();
         minh.push(v[i]);
     }
