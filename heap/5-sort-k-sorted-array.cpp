@@ -28,9 +28,7 @@ void sortksortedarray(vector<int> &v, int k)
 //  pop all remaining elements from the min-heap and assign them to the next available array index
     while (!minh.empty())
     {
-        v[index++] = minh.top();
-        // v[index] = minh.top();
-        // index++;
+        v[index++] = minh.top();        // v[index] = minh.top();   index++;
         minh.pop();
     }
 }
@@ -42,8 +40,7 @@ int main()
     int k = 3;
 
     sortksortedarray(v, k);
-    for (int &i : v)
-    {
+//     display the sorted array
+    for (int &i : v)      // for(auto i: v ){  cout<<i<<"\t";  }
         cout << i << "    ";
-    }
 }
