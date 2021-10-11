@@ -23,16 +23,15 @@ int kthsmallest(vector<int> v, int k){
 
 // or
 int kthsmallest(vector<int> v, int k){
-    priority_queue<int> maxh(v.begin(), v.begin() + k);
-    for (int i = k ; i<v.size() ; i++ )
+    priority_queue<int> maxh(v.begin(), v.begin() + k);  // insert firsk k array elemnt in heap
+    for (int i = k ; i<v.size() ; i++ )   
     {
-        if (v[i] < maxh.top())
-        {
+        if (v[i] < maxh.top())    // if current elemnt is less than the root of heap , replace the root with current arr ele        {
             maxh.pop();
             maxh.push(v[i]);
         }
     }
-    return maxh.top(); 
+    return maxh.top();  // return root of max-heap
 }
 
 // driver code
