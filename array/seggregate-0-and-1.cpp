@@ -12,6 +12,7 @@ using namespace std;
 // step1 - count the number of 0 and 1 
 // step2 - populate the array with 0 and 1
 // Time Complexity : T(n) = O(n)
+
 // void segregate0and1(int arr[], int n){
 //     int count0 = 0;  // store the count of 0
 //     for (int i = 0; i < n; i++){
@@ -31,8 +32,9 @@ using namespace std;
 // find first 1 by moving low from left to right
 // find first 0 by moving high from right to left
 // swap(arr[low], arr[high])
-// repeat till low > high
+// repeat till low < high
 //  Time Complexity : T(n) = O(n)
+
 void segregate0and1(int arr[], int n){
     int low = 0;
     int high =n-1;
