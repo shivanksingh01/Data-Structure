@@ -3,8 +3,8 @@
 // Output : arr[] = {2, 1, 5, 4}
 
 // explanantion : low = 0, high = n-1
-// swap(low, high)
-// low++, high--
+//                swap(low, high)
+//                low++, high--
 
 #include<bits/stdc++.h>
 using namespace std;
