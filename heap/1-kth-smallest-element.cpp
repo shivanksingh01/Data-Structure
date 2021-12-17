@@ -26,7 +26,7 @@ int kthsmallest(vector<int> v, int k){
     priority_queue<int> maxh(v.begin(), v.begin() + k);  // insert firsk k array elemnt in heap
     for (int i = k ; i<v.size() ; i++ )   
     {
-        if (v[i] < maxh.top())    // if current elemnt is less than the root of heap , replace the root with current arr ele        {
+        if (v[i] < maxh.top()) {   // if current elemnt is less than the root of heap , replace the root with current arr ele     
             maxh.pop();
             maxh.push(v[i]);
         }
