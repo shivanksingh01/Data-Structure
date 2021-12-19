@@ -40,7 +40,7 @@ void segregate(int arr[], int n){
     int low = 0, mid = 0;
     int high = n-1;
     while(mid<=high){
-        switch(arr[mid]){
+        switch(arr[mid]){   // can use if statement
             case 0: swap(arr[low++], arr[mid++]);
             break;
             case 1: mid++;
