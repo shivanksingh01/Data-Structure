@@ -1,3 +1,8 @@
+// Find the pair with the give sum in an array
+//      Given an unsorted integer array, find a pair with a given sum in it
+// Input  : nums = [8, 7, 2, 5, 3, 1]     ,    target = 10
+// Output : Pair found (8, 2) , (7, 3)
+
 #include <stdio.h>
 #include <stdlib.h>
 #include<bits/stdc++.h>
