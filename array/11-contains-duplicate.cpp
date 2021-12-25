@@ -25,7 +25,6 @@ bool containsDuplicate(vector<int>& nums) {
 
 // approach-2 using hashmaps (unordered maps)
 // T(N) = O(n)
-
 bool containsDuplicate(vector<int> &nums)
 {
     unordered_map<int, int> umap;
