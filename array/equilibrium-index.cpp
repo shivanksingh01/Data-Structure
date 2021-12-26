@@ -3,6 +3,9 @@
 // input arr : -7, 1, 5, 2, -4, 3, 0
 // output : 3(index)    [-7+1+5 = -4+3+0]
 
+#include<bits/stdc++.h>
+using namespace std;
+
 // Approach-1  (Brute-force)   using two loops
 // oter iterartes through all elemnts and inner checks current index
 // picked by oter is equilibrium or not
@@ -74,8 +77,6 @@ int equilibriumIndex(int arr[], int n){
     return -1;
 }
 
-#include<bits/stdc++.h>
-using namespace std;
 int main(){
     int arr[] = {-7, 1, 5, 2, -4, 3, 0};
     int n = sizeof(arr)/sizeof(int);
