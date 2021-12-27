@@ -54,11 +54,16 @@ int removeDuplicates(vector<int> &nums, int n){
         return n;
     }
     int j = 0;
-    unordered_map<int, int> umap;
+    unordered_map<int, int> umap;  // create an empty map
     for (int i = 0; i < n; i++){
-        if (umap.find(nums[i]) == umap.end()){
+        // traverse array
+        // check if arr[i] is not in map ( i.e. it is an unique elemnt)
+        // replace the arr[j] with arr[i] and incremnt j
+        if (umap.find(nums[i]) == umap.end()){  
             nums[j++] = nums[i];
         }
+        // if it is already in map 
+        // increment the value of that elemnt in map
         umap[nums[i]]++;
     }
     return j;
