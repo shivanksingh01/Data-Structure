@@ -54,22 +54,22 @@ int majorityElement(int arr[], int n){
 //      --  store each elemnt with freq in map, and return it if frequency becomes more than n/2
 // time complexity = O(n)
 // space complexity = O(n)
-int majorityElement(int arr[], int n){
-    // 
-    unordered_map<int, int> umap;   //empty map to store key value pair 
-    for (int i = 0; i < n; i++)
-        umap[arr[i]]++;     // store each elemnt freq in map
-    for(auto pair:umap){
-        if (pair.second > n/2)   // if freq. is more than n/2 return element
-            return pair.first;
-    }
-    // we can merge above two steps
-    // for (int i = 0; i < n; i++){
-    //     if(++umap[arr[i]] > n/2)
-    //         return arr[i];
-    // }
-    return -1;
-}
+// int majorityElement(int arr[], int n){
+//     // 
+//     unordered_map<int, int> umap;   //empty map to store key value pair 
+//     for (int i = 0; i < n; i++)
+//         umap[arr[i]]++;     // store each elemnt freq in map
+//     for(auto pair:umap){
+//         if (pair.second > n/2)   // if freq. is more than n/2 return element
+//             return pair.first;
+//     }
+//     // we can merge above two steps
+//     // for (int i = 0; i < n; i++){
+//     //     if(++umap[arr[i]] > n/2)
+//     //         return arr[i];
+//     // }
+//     return -1;
+// }
 
 // -------------------------------------------------------------------------------------------
 
@@ -88,40 +88,41 @@ int majorityElement(int arr[], int n){
 // if next element is same as current , increment count by 1 , else decrement count by 1
 // if count become zero :: update the majority elemnt and make count = 1
 // after traversing majorityidx will be pointing to majority elemnt 
-int getMajorityElemnt(int arr[], int n){
-    int majorityIdx = 0, count = 1; // assume first elemnt as majority and count of it =1 
-    for (int i = 1; i < n; i++){
-        if(arr[majorityIdx] == arr[i])  //comparing elemnt with next elemnt in array
-            count++;
-        else
-            count--;
-        if(count==0){ 
-            majorityIdx = i;
-            count = 1;
-        }
-    }
-    return arr[majorityIdx];   //  possible candidate for majority elemnt
-}
-int isMajorityElement(int arr[], int n, int majorityEle){
-    int count =0;
-    for (int i = 0; i < n; i++){
-            if(arr[i] == majorityEle)
-                count++;
-    }
-    return (count > n/2) ? 1 : 0 ;
-}
-void MajorityElement(int arr[], int n){
-    int candidate = getMajorityElemnt(arr,n);
-    if (isMajorityElement(arr, n, candidate))
-        cout<<candidate<<endl;
-    else    
-        cout<<"no majority element"<<endl;    
-}
+// int getMajorityElemnt(int arr[], int n){
+//     int majorityIdx = 0, count = 1; // assume first elemnt as majority and count of it =1 
+//     for (int i = 1; i < n; i++){
+//         if(arr[majorityIdx] == arr[i])  //comparing elemnt with next elemnt in array
+//             count++;
+//         else
+//             count--;
+//         if(count==0){ 
+//             majorityIdx = i;
+//             count = 1;
+//         }
+//     }
+//     return arr[majorityIdx];   //  possible candidate for majority elemnt
+// }
+// int isMajorityElement(int arr[], int n, int majorityEle){
+//     int count =0;
+//     for (int i = 0; i < n; i++){
+//             if(arr[i] == majorityEle)
+//                 count++;
+//     }
+//     return (count > n/2) ? 1 : 0 ;
+// }
+// void MajorityElement(int arr[], int n){
+//     int candidate = getMajorityElemnt(arr,n);
+//     if (isMajorityElement(arr, n, candidate))
+//         cout<<candidate<<endl;
+//     else    
+//         cout<<"no majority element"<<endl;    
+// }
 // ------------------------------------------------------------------------------
 
 
 int main(){
-    int arr[] = { 2, 8, 7, 2, 2, 5, 2, 3, 1, 2, 2 }; 
+    // int arr[] = { 2, 8, 7, 2, 2, 5, 2, 3, 1, 2, 2 }; 
+    int arr[] = {8,8,7,7,7};
     int n= sizeof(arr)/sizeof(int);
     int result = majorityElement(arr, n);
     if (result != -1) 

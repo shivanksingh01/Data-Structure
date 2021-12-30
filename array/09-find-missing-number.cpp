@@ -39,6 +39,16 @@ void findMissing(int arr[], int n){
         XOR = XOR ^ i;
     }
 
+    // or 
+    // int XOR1 = 0, XOR2 =0;
+    // for(int i=0;i<n;i++){
+    //     XOR1 = XOR1^arr[i];
+    //     XOR2 = XOR2^(i+1);
+    // }
+    // XOR2 = XOR2 ^ (n+1);
+    // int XOR = XOR1 ^ XOR2;
+    
+
     // (1^2^4^8^9^7^6^3) ^ (1^2^3^4^5^6^7^8^9) = 5 (unique/ missing number)
     //  first for loop       second for loop 
     // 1^1 = 0   , so  all pair will be cancelled only 5 will be left out
