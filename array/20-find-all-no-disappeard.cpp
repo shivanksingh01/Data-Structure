@@ -34,7 +34,7 @@ vector<int> findDisappearedNumbers(vector<int> &nums){
     // for(int i=0;i<nums.size();i++){
     //       int num = abs(nums[i])-1;
     //         if(nums[num] > 0)
-    //             nums[num] *= -1;
+    //             nums[num]  = -nums[num];
     // }
     for (int i = 0; i < n; i++){
         if (nums[i] > 0)
