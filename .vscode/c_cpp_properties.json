@@ -16,7 +16,7 @@
             "browse": {
                 "limitSymbolsToIncludedHeaders": false
             },
-            "compilerPath": "C:/MinGW/bin/g++.exe"
+            "compilerPath": "C:/MinGW/bin/cpp.exe"
         }
     ],
     "version": 4
