@@ -3,6 +3,7 @@
         "functional": "cpp",
         "iostream": "cpp",
         "array": "cpp",
-        "limits": "cpp"
+        "limits": "cpp",
+        "ostream": "cpp"
     }
 }
