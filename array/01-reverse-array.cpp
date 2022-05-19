@@ -2,12 +2,33 @@
 // Input :  arr[] = {4, 5, 1, 2}
 // Output : arr[] = {2, 1, 5, 4}
 
-// explanantion : low = 0, high = n-1
+// explanantion : low = start or 0, high = end or n-1
 //                swap(low, high)
 //                low++, high--
 
 #include<bits/stdc++.h>
 using namespace std;
+
+// ------------------------
+// Approach -1 brute force approach
+// taking extra space (array)
+// Space complexity - O(n)
+// Time comoplexity - O(n)
+
+// void reverseArray(int arr[], int n){
+//     int res[n];
+//     for (int i = 0; i < n; i++){
+//         res[n - i] = arr[i];
+//     }
+//     for (int i = 0; i < n; i++){
+//         cout << res[i] << "   ";
+//     }
+// }
+
+// -----------------------------------------------------
+//  Approach -2  two pointer aaproach
+// Time complexity O(n)
+// Space complexity : O(1)
 
 // void swap(int *x, int *y){
 //     int temp = *x;
@@ -28,12 +49,24 @@ void reverseArray(int arr[], int n){
         high--;
     }
 }
+// ---------------------------------------
+// recuursive approach
+// Time complexity : O(n)
+// void reverseArray(int arr[], int low, int high){
+//     if(low>=high){
+//         return;
+//     }
+//     int temp = arr[low];
+//     arr[low] = arr[high];
+//     arr[high] = temp;
+//     reverseArray(arr, low+1, high-1);
+// }
 
 void display(int arr[], int n){
     for (int i = 0; i < n; i++)    {
         cout<<arr[i]<<"    ";
     }
-    cout<<endl;  
+    cout<<endl;
 }
 
 int main(){
@@ -42,6 +75,5 @@ int main(){
     display(arr, n);
     reverseArray(arr, n);
     display(arr, n);
-
     return 0;
 }
