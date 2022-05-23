@@ -4,6 +4,10 @@
 //          key :  70
 //       output : 70 is present at position : 4
 
+// Approach - 1
+// reverse the condition of key<arr[mid] and key>arr[mid]
+// time complexity : O(N)
+// space complexity : O(1)
 #include <stdio.h>
 void binarySearchReverse(int arr[], int n, int key)
 {
@@ -20,7 +24,7 @@ void binarySearchReverse(int arr[], int n, int key)
             break;
         }
         //  only these conditions changes in compare with normal sorted array
-        else if (key <= arr[mid])
+        else if (key < arr[mid])
             low = mid + 1;
         else
             high = mid - 1;
