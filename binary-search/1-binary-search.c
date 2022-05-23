@@ -13,7 +13,7 @@ void  binarySearch(int arr[], int n , int key ){
     int high = n-1;
     int found = 0;
     while(low <= high){
-        int mid = (low+high)/2;
+        int mid = low+(high-low)/2;
         if (key==arr[mid]){
             found = 1;
             printf("%d is present at position :  %d\n ", key, mid+1);
