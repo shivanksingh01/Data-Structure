@@ -1,5 +1,5 @@
 // Find position(index) of element in infinite sorted array
-//
+// array  can have infinite number of elemnts , we dont know thw size of array
 
 
 #include<bits/stdc++.h>
