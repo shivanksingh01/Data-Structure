@@ -19,12 +19,12 @@ void display(int arr[],int n){
 
 // approach-1 (brute-force)
 // time complexity  = O(NlogN)
-// space complexity = O(1)  
+// space complexity = O(1)
 // but it is distorting our original array
 void duplicates(int arr[],int n){
     sort(arr, arr+n);  // sort the array
     for(int i=0;i<n;i++){   // traverse the sorted array
-        if(arr[i]==arr[i+1]){  
+        if(arr[i]==arr[i+1]){
             cout<<arr[i]<<endl;
             break;
         }
@@ -33,7 +33,7 @@ void duplicates(int arr[],int n){
 
 // Approach-2  (creating a visited array)
 // time complexity  = O(N)
-// space complexity = O(1) 
+// space complexity = O(1)
 void duplicates(int arr[], int n){
     for(int i=0; i<n;i++){
         if(arr[abs(arr[i])-1] > 0 ){
@@ -45,7 +45,7 @@ void duplicates(int arr[], int n){
     }
     //                       0   1   2  3   4   5   6   7   8
     // display(arr, n); //  -2  -5  -9  6  -9  -3  -8  -7  -1
-    // we can also find missing number 
+    // we can also find missing number
     // for(int i=0;i<n;i++){
     //     if(arr[i] > 0){
     //         cout<<" missing number : "<< i+1 <<endl;
@@ -56,7 +56,7 @@ void duplicates(int arr[], int n){
 
 //  approach-3 ( creating a frequency array using extra space)
 // time complexity  = O(N)
-// space complexity = O(N) 
+// space complexity = O(N)
 void duplicates(int arr[], int n){
     int newarr[n] = {0}; // creating newarray initializing with zero
     for(int i=0;i<n;i++){
@@ -84,7 +84,7 @@ int duplicates(vector<int>& arr) {
             slow = arr[slow];
             fast = arr[arr[fast]];
         }while (slow != fast);
-        
+
         fast = arr[0];
         while (fast != slow) {
             fast = arr[fast];
@@ -92,6 +92,15 @@ int duplicates(vector<int>& arr) {
         }
         return fast;
     }
+
+// Approach - (Using STL)
+// 
+int duplicates(vector<int> &arr){
+    int n = arr.size();
+    auto it = adjacent_find(arr, arr+n);
+    return *it;
+
+}
 
 
 int main() {
