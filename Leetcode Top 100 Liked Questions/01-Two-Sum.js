@@ -139,4 +139,112 @@ Key feature of maps
         When you need to maintain the insertion order of items.
         When you need frequent addition, deletion, or checking of items.
 
+
+    ------------------------------------------------------------------------------------------------------------
+    Map Questions with Answers
+    ---------------------------
+    Que1. Can you use an object as a key in a Map? If yes, how does JavaScript differentiate between different object keys?
+    Ans1. Yes, you can use an object as a key in a Map. JavaScript uses the object’s reference (not its content) as the key. 
+            This means that two different objects with the same properties will be treated as distinct keys because they are different references in memory.
+            
+            const map = new Map();
+            const obj1 = { key: 'value1' };
+            const obj2 = { key: 'value1' };
+
+            map.set(obj1, 'Object 1');
+            map.set(obj2, 'Object 2');
+
+            console.log(map.get(obj1)); // Output: 'Object 1'
+            console.log(map.get(obj2)); // Output: 'Object 2'
+            console.log(map.size);      // Output: 2 (since obj1 and obj2 are different references)
+
+
+    Que2. If you add the same key to a Map multiple times, what happens?
+    Ans2. If you add the same key to a Map multiple times, the value associated with that key is simply updated to the latest value. The key is not duplicated
+            
+            const map = new Map();
+            map.set('a', 1);
+            map.set('a', 2);
+            map.set('a', 3);
+
+            console.log(map.get('a')); // Output: 3
+            console.log(map.size);     // Output: 1
+
+    Que3. How does Map handle the insertion order of keys?
+    Ans3. A Map in JavaScript preserves the insertion order of its keys. When you iterate over a Map, the elements are returned in the order they were added.
+
+            const map = new Map();
+            map.set('first', 1);
+            map.set('second', 2);
+            map.set('third', 3);
+
+            for (let [key, value] of map) {
+                console.log(key, value);
+            }
+
+            Output:
+            ---------------------------
+            first 1
+            second 2
+            third 3
+
+    Que4. What happens if you use undefined or null as a key in a Map?
+    Ans4. You can use both undefined and null as keys in a Map. They are treated as distinct keys, just like any other value.
+          
+            const map = new Map();
+            map.set(undefined, 'This is undefined');
+            map.set(null, 'This is null');
+
+            console.log(map.get(undefined)); // Output: 'This is undefined'
+            console.log(map.get(null));      // Output: 'This is null'
+
+            note: undefined and null are valid keys and are distinct from each other, so they can both be used in the same Map.
+  
+    Que5. What is the difference between Map.prototype.forEach() and Array.prototype.forEach()?
+    Ans5. Both Map.prototype.forEach() and Array.prototype.forEach() iterate over elements,  
+            
+            Array.prototype.forEach(), the callback receives (value, index, array), 
+            Map.prototype.forEach(), the callback receives (value, key, map).
+
+    Que6. What happens if you attempt to get a value from a Map using a key that doesn’t exist?
+    Ans6. The get() method returns undefined if the key is not present in the Map.
+            
+            const map = new Map();
+            map.set('a', 1);
+
+            console.log(map.get('b')); // Output: undefined
+
+    Que7. Can you store NaN as a key in a Map? If so, how is it treated?
+    Ans7. Yes, you can store NaN as a key in a Map. All NaN values are considered the same key, even though NaN !== NaN is true according to the IEEE floating-point standard.
+          JavaScript treats all NaN values as the same key, so you can use NaN as a unique key in a Map.
+
+            const map = new Map();
+            map.set(NaN, 'Not a Number');
+
+            console.log(map.get(NaN)); // Output: 'Not a Number'
+
+    Que8. Does Map perform deep equality checks on object keys?
+    Ans8. No, Map does not perform deep equality checks on object keys. It uses reference equality, 
+          meaning two objects with the same properties but different references are considered different keys.
+
+            const map = new Map();
+            const obj1 = { a: 1 };
+            const obj2 = { a: 1 };
+
+            map.set(obj1, 'Object 1');
+            map.set(obj2, 'Object 2');
+
+            console.log(map.get(obj1)); // Output: 'Object 1'
+            console.log(map.get(obj2)); // Output: 'Object 2'
+
+    Qus9.  What happens if you modify an object used as a key in a Map after setting it?
+    Ans9. If you modify an object used as a key in a Map, it does not affect its identity as a key in the Map. The Map still uses the original object reference to retrieve the value.
+            
+            const map = new Map();
+            const obj = { a: 1 };
+            map.set(obj, 'Original');
+            obj.a = 2; // Modify the object
+
+            console.log(map.get(obj)); // Output: 'Original'
+
 */
