@@ -50,7 +50,13 @@ var twoSum = function (nums, target) {
 
 /*
 Approach 2 : Using Map
-Time Complexity: O(n)
+
+Complexity
+    Time complexity: O(n)
+    The time complexity of our approach is O(n) because we only need to loop through the array once.
+
+    Space complexity: O(n)
+    The space complexity of our approach is O(n) because in the worst case scenario, we need to store all n elements of the array in the hash table.
 
 Explanation:
     This approach optimizes the solution using a Map (which is like a hash table in other languages). 
