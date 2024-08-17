@@ -11,7 +11,7 @@ using namespace std;
 
 
 /*
-// using bruteforce approach (simple)
+using bruteforce approach (simple)
 void nearestGreaterRight(int arr[], int n){
     int next;
     for (int i = 0; i < n; i++)
