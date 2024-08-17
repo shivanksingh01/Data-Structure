@@ -1,7 +1,6 @@
 /*
-1. Two Sum
+1. Two Sum (Easy) : Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 
-Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 You may assume that each input would have exactly one solution, and you may not use the same element twice.
 You can return the answer in any order.
 
@@ -37,16 +36,14 @@ Explantion
 */
 
 var twoSum = function (nums, target) {
-  for (let i = 0; i < nums.length; i++) {
-    for (let j = i + 1; j < nums.length; j++) {
-      if (nums[i] + nums[j] === target) {
-        return [i, j];
-      }
+    for (let i = 0; i < nums.length; i++) {
+        for (let j = i + 1; j < nums.length; j++) {
+            if (nums[i] + nums[j] === target) {
+                return [i, j];
+            }
+        }
     }
-  }
 };
-
-
 
 /*
 Approach 2 : Using Map
@@ -77,37 +74,33 @@ Steps:
     Otherwise, store the current element and its index in the Map.
 */
 
-var twoSum = function(nums, target) {
+var twoSum = function (nums, target) {
     let mp = new Map();
 
-    for(i = 0; i<nums.length;i++){
+    for (i = 0; i < nums.length; i++) {
         let diff = target - nums[i];
-        if(mp.has(diff)){
-            return [i, mp.get(diff)]
+        if (mp.has(diff)) {
+            return [i, mp.get(diff)];
         }
 
-        mp.set(nums[i], i)
+        mp.set(nums[i], i);
     }
 };
 
-
 // function call
 const main = () => {
-  const nums = [2, 7, 11, 15];
-  const target = 9;
+    const nums = [2, 7, 11, 15];
+    const target = 9;
 
-  const result = twoSum(nums, target);
-  if (result) {
-    console.log(result);
-  } else {
-    console.log("No solution found.");
-  }
+    const result = twoSum(nums, target);
+    if (result) {
+        console.log(result);
+    } else {
+        console.log("No solution found.");
+    }
 };
 
 main();
-
-
-
 
 /*
 More about maps
